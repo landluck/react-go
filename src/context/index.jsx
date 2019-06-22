@@ -26,26 +26,44 @@ class App extends React.Component {
   }
 }
 
+// class Bottom extends React.Component {
+//   render () {
+//     return (
+//       // Context.Consumer Consumer消费者使用Context得值
+//       // 但子组件不能是其他组件，必须渲染一个函数，函数的参数就是Context得值
+//       // 当出现 多个Consumer的时候，进行嵌套，每个Consumer 的子组件必须是一个函数，即可
+//       <ThemeContext.Consumer>
+//         {
+//           theme => (
+//             <SizeContext.Consumer>
+//               {
+//                 size => (<h1>ThemeContext 的 值为 {theme}; SizeContext 的值为 {size}</h1>)
+//               }
+//             </SizeContext.Consumer>
+//           )
+//         }
+//       </ThemeContext.Consumer>
+//     )
+//   }
+// }
+
 class Bottom extends React.Component {
+  static contextType = ThemeContext
+  // static sizeContextType = SizeContext
   render () {
+    const theme = this.context
+    // const size = this.sizeContextType
     return (
       // Context.Consumer Consumer消费者使用Context得值
       // 但子组件不能是其他组件，必须渲染一个函数，函数的参数就是Context得值
       // 当出现 多个Consumer的时候，进行嵌套，每个Consumer 的子组件必须是一个函数，即可
-      <ThemeContext.Consumer>
-        {
-          theme => (
-            <SizeContext.Consumer>
-              {
-                size => (<h1>ThemeContext 的 值为 {theme}; SizeContext 的值为 {size}</h1>)
-              }
-            </SizeContext.Consumer>
-          )
-        }
-      </ThemeContext.Consumer>
+      <div>
+        <h1>ThemeContext 的 值为 {theme} </h1>
+      </div>
     )
   }
 }
+
 
 
 class Middle extends React.Component {
