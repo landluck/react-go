@@ -1,4 +1,4 @@
 import './App.css';
-import App from './context'
+import App from './lazy/index'
 
 export default App;
