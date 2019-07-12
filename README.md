@@ -11,4 +11,15 @@
 
 > context 的用法
 
+### /lazy
+
+> lazy 的用法
+
+
+### /memo
+
+> memo 的用法
+
+
+
 
