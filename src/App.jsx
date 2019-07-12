@@ -1,4 +1,4 @@
 import './App.css';
-import App from './lazy/index'
+import App from './memo/index'
 
 export default App;
