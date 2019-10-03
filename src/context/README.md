@@ -10,7 +10,7 @@
 一般情况下，数据在组件中，要一级一级的传递，单向数据流，比如Parent组件中的theme值，需要在Item组件中使用，就需要我们从Parent中向下传递，
 但当我们有了`Context`后，我们就不需要一级一级传递了
 
-```
+```javascript
     Parent(theme=red)
         List(theme=red)
             Item(theme=red)
@@ -22,7 +22,7 @@
 ```
 具体如何使用呢，看下面例子
 
-```
+```javascript
 
    
     import React, { createContext } from 'react';
@@ -71,7 +71,7 @@
 
 当 Provider 提供的值更改时，Consumer 必须重新渲染
 
-```
+```javascript
     import React, { createContext } from 'react';
     
     // 创建Context的唯一方法
@@ -126,7 +126,7 @@
 
 当出现多个Context的时候，应该如何使用呢
 
-```
+```javascript
     import React, { createContext } from 'react';
 
     // 创建Context的唯一方法
@@ -202,7 +202,7 @@
 具体看下面例子
 
 
-```
+```javascript
     import React, { createContext } from 'react';
     
     // 创建Context的唯一方法
