@@ -1,4 +1,4 @@
 import './App.css';
-import App from './memo/index'
+import App from './hooks/index'
 
 export default App;

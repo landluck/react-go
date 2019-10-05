@@ -33,7 +33,8 @@
 }
 
 button {
+  margin: 0 10px;
   border: 1px solid #eee;
-  width: 200px;
+  width: 100px;
   height: 30px;
 }
